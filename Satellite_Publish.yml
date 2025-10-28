@@ -8,7 +8,7 @@
     sat_user: "{{ lookup('credential', 'Satellite', 'Username') }}"
     sat_password: "{{ lookup('credential', 'Satellite', 'Password') }}"
 
-tasks:
+  tasks:
   - name: "Publish a content view, not idempotent"
     redhat.satellite.content_view_version:
     username: "{{ sat_user }}"
