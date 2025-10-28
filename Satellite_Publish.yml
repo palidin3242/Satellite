@@ -9,10 +9,10 @@
     sat_password: "{{ lookup('credential', 'Satellite', 'Password') }}"
 
   tasks:
-  - name: "Publish a content view, not idempotent"
-    redhat.satellite.content_view_version:
-    username: "{{ sat_user }}"
-    password: "{{ sat_password }}"
-    server_url: "{{ sat_url }}"
-    content_view: "{{ c_view ))"
-    organization: 'Demo Lab'
+    - name: "Publish a content view, not idempotent"
+      redhat.satellite.content_view_version:
+        username: "{{ sat_user }}"
+        password: "{{ sat_password }}"
+        server_url: "{{ sat_url }}"
+        content_view: "{{ c_view ))"
+        organization: 'Demo Lab'
