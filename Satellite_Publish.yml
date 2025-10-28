@@ -7,6 +7,7 @@
   tasks:
     - name: "Publish a content view, not idempotent"
       redhat.satellite.content_view_version:
+        validate_certs: false
         username: "{{ sat_user }}"
         password: "{{ sat_password }}"
         server_url: "{{ sat_url }}"
