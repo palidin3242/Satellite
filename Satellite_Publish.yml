@@ -1,9 +1,9 @@
 ---
-name: Satellite Publish
-hosts: all
-become: false
-gather_facts: false
-vars:
+- name: Satellite Publish
+  hosts: all
+  become: false
+  gather_facts: false
+  vars:
     sat_url: "{{ lookup('credential', 'Satellite', 'Satellite 6 URL') }}"
     sat_user: "{{ lookup('credential', 'Satellite', 'Username') }}"
     sat_password: "{{ lookup('credential', 'Satellite', 'Password') }}"
