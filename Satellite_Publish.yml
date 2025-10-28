@@ -4,9 +4,9 @@
   become: false
   gather_facts: false
   vars:
-    sat_url: "{{ lookup('credential', 'Satellite', 'Satellite 6 URL') }}"
-    sat_user: "{{ lookup('credential', 'Satellite', 'Username') }}"
-    sat_password: "{{ lookup('credential', 'Satellite', 'Password') }}"
+    sat_url: "{{ lookup('credential', 'Sat_Custom', 'Satellite 6 URL') }}"
+    sat_user: "{{ lookup('credential', 'Sat_Custom', 'Username') }}"
+    sat_password: "{{ lookup('credential', 'Sat_Custom', 'Password') }}"
 
   tasks:
     - name: "Publish a content view, not idempotent"
@@ -14,5 +14,5 @@
         username: "{{ sat_user }}"
         password: "{{ sat_password }}"
         server_url: "{{ sat_url }}"
-        content_view: "{{ c_view ))"
+        content_view: "{{ c_view }}"
         organization: 'Demo Lab'
