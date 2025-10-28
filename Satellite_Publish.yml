@@ -1,6 +1,6 @@
 ---
 - name: Satellite Publish
-  hosts: all
+  hosts: localhost
   become: false
   gather_facts: false
 
