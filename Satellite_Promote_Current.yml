@@ -13,7 +13,6 @@
         server_url: "{{ sat_url }}"
         content_view: "{{ c_view }}"
         version: "{{ c_version }}"
-        lifecycle_environments: "{{ life_environ }}"
         organization: 'Demo Lab'
         state: present
         
@@ -28,3 +27,4 @@
         lifecycle_environments: "{{ life_environ }}"
         current_lifecycle_environment: "{{ current_life }}"
         organization: 'Demo Lab'
+        force_promote: true
