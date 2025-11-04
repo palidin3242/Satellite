@@ -5,7 +5,6 @@
   gather_facts: false
 
   tasks:
-        
     - name: Ensure content view version is in lifecycle environment
       redhat.satellite.content_view_version:
         validate_certs: false
