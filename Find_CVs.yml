@@ -6,7 +6,7 @@
 
   tasks:
     - name: Ensure content view version is in lifecycle environment
-      redhat.satellite.content_view_version:
+      redhat.satellite.resource_info:
         validate_certs: false
         username: "{{ sat_user }}"
         password: "{{ sat_password }}"
