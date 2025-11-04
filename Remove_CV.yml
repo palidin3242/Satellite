@@ -1,0 +1,17 @@
+---
+- name: Remove CV
+  hosts: localhost
+  become: false
+  gather_facts: false
+
+  tasks:
+    - name: Ensure content view doesn't exist
+      redhat.satellite.resource_info:
+        validate_certs: false
+        username: "{{ sat_user }}"
+        password: "{{ sat_password }}"
+        server_url: "{{ sat_url }}"
+        organization: 'Demo Lab'
+        content_view: "{{ c_view }}"
+        version: "{{ c_version }}"
+        state: absent
