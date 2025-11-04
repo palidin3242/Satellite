@@ -1,0 +1,22 @@
+---
+- name: CVs in a Content View with output
+  hosts: localhost
+  become: false
+  gather_facts: false
+
+  tasks:
+    - name: Ensure content view version is in lifecycle environment
+      redhat.satellite.content_view_version:
+        validate_certs: false
+        username: "{{ sat_user }}"
+        password: "{{ sat_password }}"
+        server_url: "{{ sat_url }}"
+        organization: 'Demo Lab'
+        resource: content_views
+        search: name="{{ c_view }}"
+      register: found_cvs
+
+    - name: Display CVs
+      ansible.builtin.debug:
+        var: found_cvs
+      
