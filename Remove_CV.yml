@@ -6,7 +6,7 @@
 
   tasks:
     - name: Ensure content view doesn't exist
-      redhat.satellite.resource_info:
+      redhat.satellite.content_view_version:
         validate_certs: false
         username: "{{ sat_user }}"
         password: "{{ sat_password }}"
