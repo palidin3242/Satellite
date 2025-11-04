@@ -5,6 +5,18 @@
   gather_facts: false
 
   tasks:
+    - name: Ensure content view exists
+      redhat.satellite.content_view_version:
+        validate_certs: false
+        username: "{{ sat_user }}"
+        password: "{{ sat_password }}"
+        server_url: "{{ sat_url }}"
+        content_view: "{{ c_view }}"
+        version: "{{ c_version }}"
+        lifecycle_environments: "{{ life_environ }}"
+        organization: 'Demo Lab'
+        state: present
+
     - name: Ensure content view version is in lifecycle environment
       redhat.satellite.content_view_version:
         validate_certs: false
