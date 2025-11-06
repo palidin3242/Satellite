@@ -15,4 +15,4 @@
         lifecycle_environments: "{{ life_environ }}"
         current_lifecycle_environment: "{{ current_life }}"
         organization: 'Demo Lab'
-        force_promote: true
+        #force_promote: true
